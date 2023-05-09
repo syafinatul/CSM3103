@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text field effects</title>
+  <style>
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 2px solid #ccc;
+      transition: border-color 0.3s ease-in-out;
+    }
+    
+    input[type="text"]:focus {
+      outline: none;
+      border-color: blue;
+      box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+    }
+    
+    input[type="text"].error {
+      border-color: red;
+    }
+  </style>
+</head>
+<body>
+    <label for="myTextField">Enter your name:</label>
+    <input type="text" id="myTextField" name="myTextField" 
+    onchange="changeColor(this)">
+    <script>
+    function changeColor(element) {
+     element.style.backgroundColor = 'yellow';
+    }
+    </script>
+
+<label for="myTextField">Enter your name:</label>
+<input type="text" id="myTextField" name="myTextField" 
+onfocus="addBorder(this)">
+<script>
+function addBorder(element) {
+ element.style.border = '2px solid blue';
+}
+</script>
+
+<label for="myTextField">Enter your name:</label>
+<input type="text" id="myTextField" name="myTextField" 
+onblur="removeBorder(this)">
+<script>
+function removeBorder(element) {
+ element.style.border = 'none';
+}
+</script>
+
+</body>
+</html>
