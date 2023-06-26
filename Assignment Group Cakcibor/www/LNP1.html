@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listen Now - Music Player App</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+
+    .music-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+    .music-image {
+      width: 200px;
+      height: 200px;
+    }
+    .music-details {
+      font-size: 24px;
+    }
+
+    </style>
+</head>
+<body>
+
+  <div class="music-container">
+    <img class="music-image" src="fifty.jpg" alt="Song Image">
+    <div class="music-details">
+      <p>Cupid</p>
+      <p>FIFTY FIFTY</p>
+      <audio controls >
+      <source src="Cupid.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+
+  <!-- <div class="music-container">
+    <img class="music-image" src="AW.jpg" alt="Song Image">
+    <div class="music-details">
+      <p>Not You</p>
+      <p>Alan Walker ft Emma Steinbakken</p>
+      <audio controls >
+      <source src="Not You.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+
+  <div class="music-container">
+    <img class="music-image" src="AM.jpg" alt="Song Image">
+    <div class="music-details">
+      <p>Tak Segampang Itu</p>
+      <p>Anggi Morito</p>
+      <audio controls >
+      <source src="Tak Segampang Itu.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div> -->
+  
+  <script src="app.js"></script>
+</body>
+</html>

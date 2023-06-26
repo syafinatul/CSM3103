@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player App</title>
+  <style>
+    /* Add your CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header nav {
+      background-color: #fff;
+      color: #333;
+    }
+    
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .navbar {
+  background-color: #333;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #666;
+}
+
+.navbar a.active {
+  background-color: #666;
+}
+
+    
+    nav a {
+      color: #333;
+      text-decoration: none;
+      padding: 10px;
+    }
+    
+    .hero {
+      text-align: center;
+      padding: 50px;
+    }
+    
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    
+    .call-to-action {
+      text-align: center;
+      margin: 20px 0;
+    }
+    
+    .call-to-action a {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+    
+    .featured-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .featured-content a {
+      background-color: #333;
+      color: #fff;
+      padding: 5px 7px;
+      border-radius: 4px;
+      text-decoration: none; 
+    }
+    
+    .featured-item {
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 4px;
+    }
+    
+    .featured-item img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    
+    .featured-item h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    
+    .featured-item p {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 0;
+    }
+    
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>iListen2U</h1>
+    <nav class="navbar">
+        <ul>
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="Search.html">Search</a></li>
+          <li><a href="Library.html"> My Library</a></li>
+        </ul>
+      </nav>
+  </header>
+  
+  <div class="hero">
+    <h2>Welcome to the iListen2U</h2>
+    <p>Discover and listen to your favorite music anytime, anywhere.</p>
+  </div>
+  
+  <div class="call-to-action">
+    <a href="LNP.html">Start Listening Now</a>
+  </div>
+  
+  <div class="featured-content">
+    <div class="featured-item">
+      <img src="playlist1.jpg"  > 
+      <a href="Playlist.html">Playlist 1</a>
+      <h3>Popular Hits</h3>
+      <p>Get grooving with the latest chart-topping songs.</p>
+    </div>
+
+    <div class="featured-item">
+      <img src="playlist2.jpg" > 
+      <a href="Playlist2.html">Playlist 2</a>
+      <h3>Retro Vibes</h3>
+      <p>Take a trip down memory lane with classic hits.</p>
+    </div>
+
+    <div class="featured-item">
+      <img src="playlist3.jpg" > 
+      <a href="Playlist3.html">Playlist 3</a>
+      <h3>Mellow Melodies</h3>
+      <p>Unwind and relax with soothing tunes.</p>
+    </div>
+  </div>
+  
+  <footer>
+    <p>&copy; 2023 Music Player App. All rights reserved.</p>
+  </footer>
+</body>
+</html>

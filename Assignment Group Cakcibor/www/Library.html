@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Library - Music Player App</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    .my-library-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .featured-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .music-image {
+      width: 200px;
+      height: 200px;
+    }
+    .music-details {
+      font-size: 24px;
+    }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Library</h1>
+        <nav>
+          <a href="index.html">Home</a>
+        </nav>
+      </header>
+
+  <div class="my-library-container">
+  <div class="featured-content">
+    <div class="featured-item">
+      <h3>Popular Hits</h3>
+      <a href="Playlist.html">
+      <img src="playlist1.jpg" alt="Image Link" > </a><br><br>
+    </div>
+
+    <div class="featured-item">
+      <h3>Retro Vibes</h3>
+      <a href="Playlist.html">
+      <img src="playlist2.jpg" alt="Image Link" > </a><br><br>
+    </div>
+    
+    <div class="featured-item">
+      <h3>Mellow Melodies</h3>
+      <a href="Playlist.html">
+      <img src="playlist3.jpg" alt="Image Link" > </a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
