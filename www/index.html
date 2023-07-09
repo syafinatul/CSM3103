@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+      <!-- Custom styles for this template -->
+      <link href="css/navbar-fixed-top.css" rel="stylesheet">
+   </head>
+   <body>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-default navbar-fixed-top">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="#">Project name</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+               <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Profile</a></li>
+                      <li><a href="#">Logout</a></li>
+                    </ul>
+                  </li>
+               </ul>
+            </div><!--/.nav-collapse -->
+         </div>
+      </nav>
+
+      <div id="dataContainer"></div>
+
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: 'https://kerbau.odaje.biz/getstaff.php',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    if (data && Array.isArray(data)) {
+                        var dataContainer = $('#dataContainer');
+                        data.forEach(function(item) {
+                            var employee = JSON.parse(item);
+                            var link = $('<a>')
+                                .text(employee.email)
+                                .attr('href', 'secondpage.html?id=' + employee.employeeNumber);
+                            dataContainer.append(link);
+                            dataContainer.append('<br>');
+                        });
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.log('Error:', error);
+                }
+            });
+        });
+    </script>
+
+<div id="employeeList"></div>
+
+<script>
+    $(document).ready(function() {
+        $.ajax({
+            url: 'https://kerbau.odaje.biz/getstaffbyid.php',
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                var employeeList = $('#employeeList');
+
+                if (data && data.length > 0) {
+                    data.forEach(function(employee) {
+                        var email = employee.email;
+                        var employeeNumber = employee.employeeNumber;
+
+                        var emailLink = $('<a>', {
+                            text: email,
+                            href: 'secondpage.html?id=' + employeeNumber
+                        });
+
+                        var employeeItem = $('<p>').append(emailLink);
+                        employeeList.append(employeeItem);
+                    });
+                } else {
+                    employeeList.append('<p>No employees found.</p>');
+                }
+            },
+            error: function(xhr, status, error) {
+                console.log('Error:', error);
+                var employeeList = $('#employeeList');
+                employeeList.append('<p>Error occurred while retrieving employee data.</p>');
+            }
+        });
+    });
+</script>
+     
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+   
+            <div class="row">
+               <div class="col-md-12">   
+                ©copyright syafinatulzanis       
+               </div>
+        
+     
+      </div>
+ 
+</nav>
+         
+      <script src="js/jquery-3.2.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+   </body>
+</html>
